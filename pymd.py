@@ -347,4 +347,15 @@ def test(input=""):
     print(repr(hashlib.md5(input.encode('utf-8')).hexdigest()))
 
 if __name__=="__main__":
-    test("crypt")
+    m = "Use HMAC, not hashes"
+    x = "Good advice"
+    h = md5()
+    h.update(m)
+    print(h.hexdigest())
+    h2 = md5()
+    h2.update(m + padding(len(m)*8) + x)
+    print(h2.hexdigest())
+    h = md5(state="3ecc68efa1871751ea9b0b1a5b25004d", count=512)
+    h.update(x)
+    print(h.hexdigest())
+
