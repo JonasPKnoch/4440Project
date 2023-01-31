@@ -357,5 +357,6 @@ if __name__=="__main__":
     print(h2.hexdigest())
     h = md5(state="3ecc68efa1871751ea9b0b1a5b25004d", count=512)
     h.update(x)
+    bits = (20 + len(padding(20*8)))*8.
     print(h.hexdigest())
 

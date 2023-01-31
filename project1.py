@@ -1,7 +1,7 @@
 import http.client as httplib
 from urllib.parse import urlparse, quote
 import sys, re
-from pymd5 import *
+from pymd import *
 url = sys.argv[1]
 
 # Your code to modify the URL goes here!
