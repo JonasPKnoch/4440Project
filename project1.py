@@ -2,8 +2,8 @@ import http.client as httplib
 from urllib.parse import urlparse, quote
 import sys, re
 from pymd import *
-url = sys.argv[1]
-#url = "http://cs4440.eng.utah.edu/project1/api?token=402a574d265dc212ee64970f159575d0&user=admin&command1=ListFiles&command2=NoOp"
+#url = sys.argv[1]
+url = "http://cs4440.eng.utah.edu/project1/api?token=402a574d265dc212ee64970f159575d0&user=admin&command1=ListFiles&command2=NoOp"
 
 url_begin = url[ : url.index("token=") + 6]
 url_token = url[url.index("token=") + 6 : url.index("&user=")]
