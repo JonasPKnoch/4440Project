@@ -1,0 +1,7 @@
+
+""", "iso-8859-1")
+from hashlib import sha256
+if "1B" in MSG.decode("iso-8859-1"):
+    print("I come in peace.")
+else:
+    print("Prepare to be destroyed!")
